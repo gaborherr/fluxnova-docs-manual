@@ -4,6 +4,8 @@ languageCode: "en-us"
 title: "Fluxnova documentation"
 theme: "fluxnova"
 
+canonifyURLs: true
+
 markup:
   goldmark:
     renderer:
