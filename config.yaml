@@ -1,8 +1,10 @@
 ---
-baseURL: "/"
+baseURL: "/fluxnova-docs-manual/1.0/"
 languageCode: "en-us"
 title: "Fluxnova documentation"
 theme: "fluxnova"
+
+canonifyURLs: true
 
 markup:
   goldmark:
@@ -17,19 +19,19 @@ blackfriday:
   plainIDAnchors: true
 
 params:
-  canonicalBasePath: "https://docs.fluxnova.finos.org"
+  canonicalBasePath: ""
   version: "1.0"
   forum:
     url: "https://github.com/finos/fluxnova-modeler/discussions"
     name: "Fluxnova Forum"
   section:
     id: "manual"
-    version: "develop"
-    versionAlias: "1.0"
+    version: "1.0"
+    versionAlias: "develop"
     versions:
       - "latest"
       - "1.0"
-      - "develop"
+      - "2.0"
   # base URLs with optional version number in path using placeholder %s
   openApiBaseURL: "https://docs.fluxnova.finos.org/rest/fluxnova-bpm-platform/%s"
   javadocsBaseURL: "https://docs.fluxnova.finos.org/javadocs/%s"
