@@ -425,6 +425,17 @@ The following is a list with the most commonly used process engine configuration
     </td>
   </tr>
 
+  <tr id="enableScriptPreprocessing">
+    <td><code>enableScriptPreprocessing</code></td>
+    <td>Boolean</td>
+    <td>
+        If set to true, script preprocessing is enabled and each script is processed by registered preprocessor(s) in registration order, prior to script execution. Default value is <code>false</code>.
+      <p>
+        <strong>Values:</strong> <code>true</code>, <code>false</code> (Boolean).
+      </p>
+    </td>
+  </tr>
+
   <tr>
     <td><code>forceCloseMybatisConnectionPool</code></td>
     <td>Boolean</td>
@@ -874,7 +885,7 @@ The following is a list with the most commonly used process engine configuration
   <tr>
     <td><a name="enablePasswordPolicy"></a><code>enablePasswordPolicy</code></td>
     <td>Boolean</td>
-    <td>Set to <code>true</code>, to enable a <a href="{{< ref "/user-guide/process-engine/password-policy">}}">password policy</a> for users that are managed by the engine. If a <a href="https://docs.fluxnova.finos.org/manual/latest/user-guide/process-engine/password-policy/#customize-the-password-policy">custom password policy</a> is configured, it will be enabled. Otherwise the <a href="https://docs.fluxnova.finos.org/manual/latest/user-guide/process-engine/password-policy/#built-in-password-policy">built-in password policy</a> is activated.
+    <td>Set to <code>true</code>, to enable a <a href="{{< ref "/user-guide/process-engine/password-policy" >}}">password policy</a> for users that are managed by the engine. If a <a href="{{< ref "/user-guide/process-engine/password-policy/#customize-the-password-policy">}}">custom password policy</a> is configured, it will be enabled. Otherwise the <a href="{{< ref "/user-guide/process-engine/password-policy/#built-in-password-policy">}}">built-in password policy</a> is activated.
     </td>
   </tr>
 
