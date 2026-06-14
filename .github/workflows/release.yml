@@ -127,6 +127,9 @@ jobs:
 
           echo "Created redirect file at $REDIRECT_FILE"
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+      
       - name: Publish Versioned Documentation
         uses: peaceiris/actions-gh-pages@v4
         with:
