@@ -20,14 +20,14 @@ blackfriday:
 
 params:
 #  canonicalBasePath: "https://docs.fluxnova.finos.org"
-  version: "1.0"
+  version: "1.1"
 #  versionAlias: "develop"
   forum:
     url: "https://github.com/finos/fluxnova-modeler/discussions"
     name: "Fluxnova Forum"
   # base URLs with optional version number in path using placeholder %s
-  openApiBaseURL: "https://docs.fluxnova.finos.org/rest/fluxnova-bpm-platform/%s"
-  javadocsBaseURL: "https://docs.fluxnova.finos.org/javadocs/%s"
+  openApiBaseURL: "https://gaborherr.github.io/fluxnova-bpm-platform/openapi/%s"
+  javadocsBaseURL: "https://gaborherr.github.io/fluxnova-bpm-platform/javadocs/%s"
   
   github:
     repositoryName: "finos/fluxnova-docs-manual"
