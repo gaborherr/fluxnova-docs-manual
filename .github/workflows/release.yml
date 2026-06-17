@@ -127,15 +127,11 @@ jobs:
 
           echo "Created redirect file at $REDIRECT_FILE"
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-      
       - name: Publish Versioned Documentation
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          #destination_dir: manual/${{ steps.get_version.outputs.minor_version }}
           keep_files: true # Essential: keeps /manual/1.0 when publishing 1.1
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
