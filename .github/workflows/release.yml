@@ -105,27 +105,8 @@ jobs:
           echo "The latest version is: $LATEST_VERSION"
           echo "LATEST_VERSION=$LATEST_VERSION" >> $GITHUB_OUTPUT
           
-          # Create the HTML redirect file
-          REDIRECT_FILE="./public/manual/latest/index.html"
-          cat > "$REDIRECT_FILE" <<-EOF
-          <!DOCTYPE html>
-          <html>
-          <head>
-            <title>Redirecting to latest documentation...</title>
-            <link rel="canonical" href="/manual/${LATEST_VERSION}/" />
-            <meta charset="utf-8">
-            <meta http-equiv="refresh" content="0; url=/manual/${LATEST_VERSION}/">
-            <script>
-              window.location.replace("/manual/${LATEST_VERSION}/" + window.location.hash);
-            </script>
-          </head>
-          <body>
-            <p>You are being redirected to the <a href="/manual/${LATEST_VERSION}/">latest version of the documentation</a>.</p>
-          </body>
-          </html>
-          EOF
-
-          echo "Created redirect file at $REDIRECT_FILE"
+          # Sync 404.html for automated redirection to latest version
+          cp ./404.html ./public
 
       - name: Publish Versioned Documentation
         uses: peaceiris/actions-gh-pages@v4
