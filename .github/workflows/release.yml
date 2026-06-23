@@ -63,7 +63,7 @@ jobs:
       - name: Build website
         # We override baseURL so Hugo generates correct internal links for the subfolder
         run: |
-          hugo --minify --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/manual/${{ steps.get_version.outputs.minor_version }}/" --destination public/manual/${{ steps.get_version.outputs.minor_version }}/
+          hugo --minify --baseURL "/${{ github.event.repository.name }}/manual/${{ steps.get_version.outputs.minor_version }}/" --destination public/manual/${{ steps.get_version.outputs.minor_version }}/
 
       - name: Generate versions.json and "latest" redirect
         id: generate_manifest
